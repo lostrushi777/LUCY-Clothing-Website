@@ -3,7 +3,11 @@ Currently a WIP!!! Just wanted to make a clothing website with multiple pages to
 <div>
   <li>
     MENU
+  </li>
+  <li>
     BLOG
+  </li>
+  <li>
     SHOPPING CART
   </li>
 </div>
