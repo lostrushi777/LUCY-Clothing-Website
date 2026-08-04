@@ -12,6 +12,6 @@ Currently a WIP!!! Just wanted to make a clothing website with multiple pages to
   </li>
 </div>
 <div>
-  &nbsq;
+  <br>
   !ALL IMAGES ARE NOT MINE! HAND PICKED FROM PINTEREST!  
 </div>
