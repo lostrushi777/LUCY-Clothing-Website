@@ -45,7 +45,7 @@ const CLOTHING_DATABASE = {
     "imageSrc": "women/clothes-(women)/bottoms/bellbottom.jpg"
   },
   "contain": {
-    "title": "CONTAIN JEANS",
+    "title": "CONTAIN SKIRT",
     "price": "$59.99",
     "imageSrc": "women/clothes-(women)/bottoms/contain.jpg"
   },
