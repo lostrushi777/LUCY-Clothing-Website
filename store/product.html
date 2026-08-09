@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="allheader.css">
+    <link rel="stylesheet" href="product.css">
+    <title>LUCY</title>
+  </head>
+  <body>
+    <main>
+      <!-- HEADER MENU -->
+      <div>
+        <div class="topnav">
+          <nav>
+            <div id="menu">
+              <ul class="links">
+                <li class="item"><a href="frontpage.html" class="link">HOME</a></li>
+                <li class="item"><a href="summer/summercollection.html" class="link">SUMMER '26</a></li>
+                <li class="item"><a href="trending/trending.html" class="link">TRENDING</a></li>
+                <li class="item"><a href="shopall/shopall.html" class="link">SHOP ALL</a></li>
+                <li class="item"><a href="womenclothes.html" class="link">WOMEN</a></li>
+                <li class="item"><a href="mens/menclothes.html" class="link">MEN</a></li>
+                <li class="item"><a href="about/about.html" class="link">ABOUT</a></li>
+                <li class="item"><a href="blog/blogs.html" class="link">BLOG</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="shoppingcart" id="shoppingcart">
+          <h3>YOUR CART</h3>
+          <div class="cart-dropdown-items">
+            <p class="empty-cart-msg">YOUR CART IS CURRENTLY EMPTY</p>
+          </div>
+          <div class="cart-dropdown-footer">
+            <div class="cart-subtotal">
+              <span>SUBTOTAL:</span>
+              <span class="subtotal-amount">$0.00</span>
+            </div>
+            <a href="" class="checkout-btn">
+              CHECKOUT
+            </a>
+          </div>
+        </div>
+        <div class="announcement">
+          <div>10% OFF ALL SUMMER</div>
+        </div>
+        <div class="header">
+          <div class="hamburger">
+            <button class="hamburger-btn button" id="hamburger" aria-label="menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <ul class="lucytitle">
+            <a href="frontpage.html" class="link">
+              <div>LUCY</div>
+            </a>
+          </ul>
+          <div class="icons">
+            <div class="search">
+              <button class="button">
+                <img class="icon" src="imgs/svgs/magnifying-glass.svg" alt="">
+              </button>
+            </div>
+            <div class="account">
+              <button class="button">
+                <img class="icon" src="imgs/svgs/person.svg" alt="">
+              </button>
+            </div>
+            <div class="cart">
+              <button class="button" id="cart">
+                <img class="icon" src="imgs/svgs/cart.svg" alt="">
+                <span class="cart-badge">0</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--ALL CONTENTS OF PRODUCT.HTML-->
+      <div class="product-detail-container">
+        <a href="#" id="back-link" class="link"> &lt;&lt; BACK TO CLOTHES </a>
+        <div class="product-wrapper">
+          <div class="product-detail-image">
+            <img id="detail-image" src="" alt="">
+          </div>
+          <div class="product-detail-info">
+            <h1 id="detail-title">Loading...</h1>
+            <p id="detail-price"></p>
+            <div class="buttons">
+              <div class="size-selector">
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn" data-size="M">M</button>
+                <button class="size-btn" data-size="L">L</button>
+                <button class="size-btn" data-size="XL">XL</button>
+              </div>
+              <div class="quantity-selector">
+                <button id="minus-btn" type="button" class="qty-btn">-</button>
+                <span id="quantity-type" class="qty-number">1</span>
+                <button id="plus-btn" type="button" class="qty-btn">+</button>
+              </div>
+              <button class="cart-btn" id="add-to-cart-btn" type="button">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <ul class="links">
+          <div class="lucytitle">
+            LUCY
+          </div>
+          <div class="information">
+            INFO
+          </div>
+          <div class="hr"></div>
+          <li class="item"><a href="../about/about.html" class="link">
+              ABOUT US
+            </a></li>
+          <li class="item"><a href="" class="link">
+              IDK
+            </a></li>
+          <li class="item"><a href="" class="link">
+              JUST TYPING
+            </a></li>
+          <li class="item"><a href="" class="link">
+              HI
+            </a></li>
+          <li class="github"><a href="https://github.com/lostrushi777" target="_blank" class="link">
+              <img src="imgs/svgs/GitHub_Lockup_Black.svg">
+            </a></li>
+      </div>
+      <script src="lucy.js"></script>
+      <script src="product.js"></script>
+    </main>
+  </body>
+</html>

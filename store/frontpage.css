@@ -1,0 +1,183 @@
+.headline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.headline img {
+    z-index: 1;
+    width: 100%;
+    }
+  .summernotice {
+    padding: 3px;
+    position: absolute;
+    z-index: 2;
+    font-size: 32px;
+    background-color: white;
+    color: black;
+  }
+  .shopnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    transform: translateY(150px);
+    color: white;
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid white;
+    border-style: solid;
+    transition-duration: 0.5s;
+    text-decoration: none;
+  }
+
+  .shopnow:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-style: solid;
+  }
+}
+
+.genderselect {
+  position: relative;
+  margin-bottom: 32px;
+  margin-top: 32px;
+
+  .link {
+    display: flex;
+    flex-direction:column-reverse;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .shopforsection {
+    padding-bottom: 32px;
+    background-color: rgb(235, 239, 240);
+    height: 100%;
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+  }
+  .link img {
+    object-fit:cover;
+    max-width: 100%;
+    height: 550px;
+  }
+  .link:hover {
+    text-decoration: underline;
+  }
+  .section {
+    font-size: 24px;
+    list-style-type: none;
+  }
+}
+
+.blogheadline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  &.blogheadline img {
+    width: 100%;
+  }
+    .blogpost {
+      padding: 3px;
+      position: absolute;
+      z-index: 2;
+      font-size: 32px;
+      background-color: white;
+      color: black;
+    }
+  
+    .blogview {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 2;
+      transform: translateY(150px);
+      color: white;
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
+      background-color: transparent;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1px solid white;
+      border-style: solid;
+      transition-duration: 0.5s;
+      text-decoration: none;
+    }
+  
+    .blogview:hover {
+      background-color: white;
+      color: black;
+      border-color: black;
+      border-style: solid;
+    }
+  
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 32px;
+  background-color: rgb(235, 239, 240);
+  .lucytitle {
+    opacity: 60%;
+    font-family: "XLY";
+    font-size: 32px;
+    font-weight: normal;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    width:fit-content;
+  }
+  .information {
+    width: fit-content;
+    margin-bottom: 12px;
+  }
+  .hr {
+    border: none;
+    background-color: black;
+    width: 16%;
+    height: 2px;
+  }
+  .link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  .item {
+    width: fit-content;
+    font-size: 16px;
+    list-style-type: none;
+    line-height: 3;
+  }
+  .github {
+    opacity: 60%;
+    width: 100px;
+    height: fit-content;
+    padding-top: 40px;
+    padding-bottom: 16px;
+    list-style-type: none;
+    &.github img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

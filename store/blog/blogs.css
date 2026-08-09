@@ -1,0 +1,13 @@
+.blogsection {
+  padding-top: 100px;
+  padding-bottom: 8px;
+  position: relative;
+  color: white;
+  background-color: black;
+  &.blogsection img {
+    width: 100%;
+  }
+  .title {
+    margin-left: 32px;
+  }
+}

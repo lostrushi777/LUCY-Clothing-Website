@@ -1,0 +1,10 @@
+.bio {
+  font-size: large;
+  margin: auto;
+  width: 45%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+}

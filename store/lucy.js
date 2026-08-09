@@ -14,3 +14,11 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
+const cart = document.getElementById("cart");
+const shoppingcart = document.getElementById("shoppingcart");
+
+cart.addEventListener("click", () => {
+  cart.classList.toggle("active");
+  shoppingcart.classList.toggle("show");
+});
