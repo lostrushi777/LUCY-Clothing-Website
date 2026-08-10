@@ -412,4 +412,88 @@ document.addEventListener('DOMContentLoaded', () => {
   loadProductFromURL();
   setupUIEventListeners();
   renderCartDropdown();
+  
+  // Run checkout builder if on checkout page
+  renderCheckoutPage(); 
 });
+
+/* ==========================================================================
+   7. CHECKOUT PAGE LOGIC
+   ========================================================================== */
+
+function renderCheckoutPage() {
+  const checkoutList = document.getElementById('checkout-items-list');
+  const summaryBreakdown = document.getElementById('summary-item-breakdown');
+  const subtotalEl = document.getElementById('checkout-subtotal');
+  const discountEl = document.getElementById('checkout-discount');
+  const totalEl = document.getElementById('checkout-total');
+
+  if (!checkoutList) return;
+
+  const cart = JSON.parse(localStorage.getItem('lucy_cart')) || [];
+
+  checkoutList.innerHTML = '';
+  if (summaryBreakdown) summaryBreakdown.innerHTML = '';
+
+  if (cart.length === 0) {
+    checkoutList.innerHTML = '<p class="empty-cart-msg">YOUR CART IS EMPTY</p>';
+    if (summaryBreakdown) summaryBreakdown.innerHTML = '<p class="empty-summary-msg">No items to calculate</p>';
+    if (subtotalEl) subtotalEl.textContent = '$0.00';
+    if (discountEl) discountEl.textContent = '-$0.00';
+    if (totalEl) totalEl.textContent = '$0.00';
+    return;
+  }
+
+  let subtotal = 0;
+
+  cart.forEach((item, index) => {
+    const unitPrice = Number(item.price) || 0;
+    const itemSubtotal = unitPrice * item.quantity;
+    subtotal += itemSubtotal;
+
+    // Render checkout item list
+    const itemCard = document.createElement('div');
+    itemCard.classList.add('checkout-item-card');
+    itemCard.innerHTML = `
+      <img src="${item.image}" alt="${item.title}" class="checkout-item-img">
+      <div class="checkout-item-details">
+        <h3>${item.title}</h3>
+        <p class="item-meta">Size: <strong>${item.size}</strong></p>
+        <p class="item-meta">Qty: <strong>${item.quantity}</strong></p>
+      </div>
+      <div class="checkout-item-total">
+        <p class="item-subtotal-price">$${itemSubtotal.toFixed(2)}</p>
+        <button class="remove-btn">Remove</button>
+      </div>
+    `;
+
+    const removeBtn = itemCard.querySelector('.remove-btn');
+    removeBtn.addEventListener('click', () => {
+      removeCheckoutItem(index);
+    });
+
+    checkoutList.appendChild(itemCard);
+
+    // Render line item in summary breakdown
+    if (summaryBreakdown) {
+      const summaryRow = document.createElement('div');
+      summaryRow.classList.add('summary-calc-row');
+      summaryRow.innerHTML = `
+        <span class="calc-label">${item.title} <small>(${item.quantity} &times; $${unitPrice.toFixed(2)})</small></span>
+        <span class="calc-value">$${itemSubtotal.toFixed(2)}</span>
+      `;
+      summaryBreakdown.appendChild(summaryRow);
+    }
+  });
+
+  // Calculate 10% discount and totals
+  const discountRate = 0.10;
+  const discountAmount = subtotal * discountRate;
+  const discountedSubtotal = subtotal - discountAmount;
+  const shippingCost = 5.00;
+  const grandTotal = discountedSubtotal + shippingCost;
+
+  if (subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+  if (discountEl) discountEl.textContent = `-$${discountAmount.toFixed(2)}`;
+  if (totalEl) totalEl.textContent = `$${grandTotal.toFixed(2)}`;
+}

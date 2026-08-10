@@ -90,6 +90,7 @@
     flex-shrink: 0;
   }
   .remove-btn {
+    color: black;
     cursor: pointer;
     background-color: transparent;
     border: 2px solid transparent;

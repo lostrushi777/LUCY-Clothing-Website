@@ -186,10 +186,16 @@ body {
     padding-bottom: 16px;
   }
   .checkout-btn {
+    border: 2px solid black;
+    align-self: center;
+    padding: 8px;
+    width: fit-content;
     text-decoration: none;
     color: inherit;
+    transition: 0.3s ease-in-out;
     &.checkout-btn:hover {
-      text-decoration: underline;
+      color: white;
+      background-color: black;
     }
   }
 }

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LUCY</title>
+    <title>CHECKOUT</title>
+    <link rel="stylesheet" href="checkout.css">
     <link rel="stylesheet" href="allheader.css">
-    <link rel="stylesheet" href="frontpage.css">
     <link rel="stylesheet" href="product.css">
   </head>
-
   <body>
     <main>
       <!-- HEADER MENU -->
@@ -77,49 +76,57 @@
           </div>
         </div>
       </div>
-      <!-- ALL CONTENTS OF FRONTPAGE.HTML -->
-      <div class="headline">
-        <img src="imgs/model.jpg" alt="model">
-        <div class="summernotice">
-          LIMITED TIME • SUMMER COLLECTION
-        </div>
-        <a href="summer/summercollection.html" class="shopnow">
-            SHOP NOW
-        </a>
-      </div>
-      <div class="genderselect">
-        <nav>
-          <ul class="shopforsection">
-            <li class="section">
-              <a href="women/womenclothes.html" class="link">
-                <img src="imgs/womensection.jpg" alt="">
-                <span>SHOP FOR WOMEN</span>
-              </a>
-            </li>
-            <li class="section">
-              <a href="shopall/shopall.html" class="link">
-                <img src="imgs/shopallsection.jpg" alt="">
-                <span>SHOP ALL</span>
-              </a>
-            </li>
-            <li class="section">
-              <a href="mens/menclothes.html" class="link">
-                <img src="imgs/mensection.jpg" alt="">
-                <span>SHOP FOR MEN</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="blogheadline">
-        <img src="imgs/news.jpeg" alt="newsarticle">
-        <div class="blogpost">
-          ALL BLOGS
-        </div>
-        <a href="blog/blogs.html" class="blogview">
-          VIEW
-        </a>
-      </div>
+      <!-- ALL CONTENTS OF CHECKOUT.HTML -->
+      <header class="checkout-link">
+        <a href="#" id="back-link" class="back-link">&lt;&lt; Continue Shopping</a>
+        <h1>CHECKOUT</h1>
+        <h2>Your Items</h2>
+      </header>
+      
+      <main class="checkout-container">
+        <!-- Left Column: Loaded Cart Items -->
+        <section class="checkout-items-section">
+          <div id="checkout-items-list">
+            <!-- JS will render cart items here -->
+          </div>
+        </section>
+      
+        <!-- Right Column: Order Summary & Action -->
+        <section class="checkout-summary-section">
+          <h2>Order Summary</h2>
+        
+          <!-- Dynamic list of itemized calculations -->
+          <div id="summary-item-breakdown" class="summary-breakdown-container">
+            <!-- JS will populate rows like: MAKI TEE (x2) ... $59.98 -->
+          </div>
+        
+          <hr class="summary-divider">
+        
+          <!-- Calculated Totals -->
+          <div class="summary-row">
+            <span>Items Subtotal</span>
+            <span id="checkout-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row discount">
+            <span>Discount (10% OFF)</span>
+            <span id="checkout-discount">-$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Estimated Shipping</span>
+            <span id="checkout-shipping">$5.00</span>
+          </div>
+          <hr class="summary-divider">
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="checkout-total">$0.00</span>
+          </div>
+        
+          <a href="done.html" target="_blank">
+            <button id="place-order-btn" class="order-btn">PLACE ORDER</button>
+          </a>
+        </section>
+      </main>
+      <!--INFO SECTION-->
       <div class="info">
         <ul class="links">
           <div class="lucytitle">
@@ -130,20 +137,20 @@
           </div>
           <div class="hr"></div>
           <li class="item"><a href="about/about.html" class="link">
-            ABOUT US
-          </a></li>
+              ABOUT US
+            </a></li>
           <li class="item"><a href="" class="link">
-            IDK
-          </a></li>
+              IDK
+            </a></li>
           <li class="item"><a href="" class="link">
-            JUST TYPING
-          </a></li>
+              JUST TYPING
+            </a></li>
           <li class="item"><a href="" class="link">
-            HI
-          </a></li>
+              HI
+            </a></li>
           <li class="github"><a href="https://github.com/lostrushi777" target="_blank" class="link">
-            <img src="imgs/svgs/GitHub_Lockup_Black.svg">
-          </a></li>
+              <img src="imgs/svgs/GitHub_Lockup_Black.svg">
+            </a></li>
       </div>
       <script src="lucy.js"></script>
       <script src="product.js"></script>
